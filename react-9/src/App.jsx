@@ -1,17 +1,12 @@
 import React, { Component } from 'react'
 import Navbar from './comonents/Navbar'
-import User from './comonents/User'
- class App extends Component {
-  constructor(props){
-    super(props)
-  }
-
-
+import Bind from './states/Bind'
+class App extends Component {
   render() {
     return (
       <div>
-        <Navbar/>
-<User/>
+        <Navbar />
+        <Bind/>
       </div>
     )
   }
