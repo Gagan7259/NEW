@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from './NAVBAR/Navbar'
-import User from './Userdata/User'
+import Routing from './Userdata/Routing'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 class App extends Component {
   render() {
@@ -9,7 +9,7 @@ class App extends Component {
         <Router>
           <Navbar />
           <Routes>
-            <Route path="/user" element={<User />} />
+            <Route path="/user" element={<Routing />} />
             
           </Routes>
         </Router>

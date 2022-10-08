@@ -7,7 +7,7 @@ class User extends Component {
   UserHandler = () => {
     Axios.get('https://dummyjson.com/users')
       .then((response) => {
-        this.setState({user: response.data})
+        this.setState({ users: response.data })
       })
       .catch((error) => {})
   }
@@ -17,7 +17,7 @@ class User extends Component {
         <h1>user component</h1>
         <pre>{JSON.stringify(this.state)}</pre>
         <button onClick={this.UserHandler}>click it bro</button>
-        <table className=' table table-hover'>
+        <table className=" table table-hover">
           <thead>
             <th>id</th>
             <th>first name</th>
@@ -26,11 +26,13 @@ class User extends Component {
           <tbody>
             {
               this.state.users.map((user)=>{
-                return <tr>
-                  <td>{user.id}</td>
-                  <td>{user.firstName}</td>
-                  <td>{user.age}</td>
-                </tr>
+                return(
+                  <tr>
+                    <td>{user.id}</td>
+                    <td>{user.firstName}</td>
+                    <td></td>
+                  </tr>
+                )
               })
             }
           </tbody>
