@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Axios from 'axios'
 class User extends Component {
   state = {
-    users: [],
+    users: {},
   }
   UserHandler = () => {
     Axios.get('https://dummyjson.com/users')
@@ -14,9 +14,8 @@ class User extends Component {
   render() {
     return (
       <div>
-        <h1>user component</h1>
+        <h1>{this.state.users}</h1>
         <pre>{JSON.stringify(this.state)}</pre>
-        <button onClick={this.UserHandler}>click it bro</button>
         <table className=" table table-hover">
           <thead>
             <th>id</th>
