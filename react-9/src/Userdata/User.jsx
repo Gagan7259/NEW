@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Axios from 'axios'
 class User extends Component {
   state = {
-    users: {},
+    users:[],
   }
   UserHandler = () => {
     Axios.get('https://dummyjson.com/users')

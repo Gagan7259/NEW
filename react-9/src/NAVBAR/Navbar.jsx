@@ -11,8 +11,8 @@ class Navbar extends Component {
           <div className="ml-auto">
             <ul className="navbar-nav">
               <li className="nav-list">
-                <Link className="nav-link" to="/user">
-                  User
+                <Link className="nav-link" to="/contact">
+                  ContactApp
                 </Link>
               </li>
               
